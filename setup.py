@@ -31,8 +31,8 @@ setuptools.setup(name='imagenetscraper',
                      [console_scripts]
                      imagenetscraper = imagenetscraper:main
                  ''',
-                 description='Command-line utility for downloading all thumbnail images from an ' +
-                             'ImageNet synset.',
+                 description='Bulk-download all thumbnails from an ImageNet synset, with ' +
+                             'optional rescaling',
                  long_description=long_description,
                  version='1.0',
                  license='AGPLv3',

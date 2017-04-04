@@ -80,7 +80,7 @@ Install
 
    ::
 
-    sudo pip3 install imagenetscraper
+    sudo -H pip3 install imagenetscraper
 
 Citation
 --------
