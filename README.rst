@@ -121,3 +121,4 @@ with this program. If not, see <http://www.gnu.org/licenses/>.
     :target: https://pypi.python.org/pypi/imagenetscraper
 .. |travis| image:: https://img.shields.io/travis/spinda/imagenetscraper/master.svg
     :alt: Build Status
+    :target: https://travis-ci.org/spinda/imagenetscraper
