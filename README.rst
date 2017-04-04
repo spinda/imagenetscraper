@@ -2,10 +2,12 @@ imagenetscraper
 ===============
 
 Command-line utility for downloading all thumbnail images from an ImageNet_
-synset.
+synset, optionally rescaling to a different resolution.
 
 Usage
 -----
+
+::
 
     Usage: imagenetscraper [OPTIONS] SYNSET_ID [OUTPUT_DIR]
 
@@ -19,16 +21,16 @@ Usage
 
 If the URL of a synset page looks like:
 
+::
+
     http://image-net.org/synset?wnid=n00000000
                                      ^^^^^^^^^
                                      SYNSET_ID
 
 ``SYNSET_ID`` is the ``n00000000`` part. For example, for the "person,
-individual, someone, somebody, mortal, soul" synset at:
-
-    http://image-net.org/synset?wnid=n00007846
-
-the corresponding synset id is ``n00007846``.
+individual, someone, somebody, mortal, soul" synset at
+http://image-net.org/synset?wnid=n00007846, the corresponding synset id is
+``n00007846``.
 
 The default output directory (``OUTPUT_DIR``) is the current directory.
 
@@ -38,21 +40,29 @@ Examples
 To download all thumbnail imagess from the synset mentioned above to the
 directory "person_images", run:
 
+::
+
     imagenetscraper n00007846 person_images
 
 To do the same, but with each thumbnail image rescaled to a width of 256 and a
 height of 128, add ``--size 256,128``:
 
+::
+
     imagenetscraper n00007846 person_images --size 256,128
 
 To run in "quiet mode", suppressing progress output, add ``--quiet``:
 
-    imagenetscraper n00007846 person_images --size 256,256 --quiet
+::
+
+    imagenetscraper n00007846 person_images --size 256,128 --quiet
 
 By default, imagenetscraper will download 8 images at once. To change this, use
 ``--concurrency``:
 
-    imagenetscraper n00007846 person_images --size 256,256 --concurrency 4
+::
+
+    imagenetscraper n00007846 person_images --size 256,128 --concurrency 4
 
 Install
 -------
@@ -60,9 +70,13 @@ Install
 1) Install Python 3, pip, and a development version of libjpeg. imagenetscraper
    is tested with Python 3.4, 3.5, 3.6 and libjpeg-turbo 8.
 
+   ::
+
     sudo apt-get install python3.5 python3-pip libjpeg-turbo8-dev
 
 2) Download and install imagenetscraper with pip.
+
+   ::
 
     sudo pip3 install imagenetscraper
 
@@ -70,6 +84,8 @@ Citation
 --------
 
 If this tool helped with your research, a citation would be appreciated:
+
+::
 
     @Misc{smith17,
     author = {Michael Smith},
