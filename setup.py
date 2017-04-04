@@ -23,7 +23,7 @@
 import setuptools
 
 with open('README.rst', 'rb') as f:
-    long_description = f.read().decode('utf-8')
+    long_description = f.read().decode('utf-8').replace('|pypi| |travis|', '')
 
 setuptools.setup(name='imagenetscraper',
                  py_modules=['imagenetscraper'],
