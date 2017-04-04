@@ -41,7 +41,7 @@ class ScrapeSynsetTestCase(unittest.TestCase):
                 self.assertEqual(len(stdout), 0)
             else:
                 self.assertNotEqual(len(stdout), 0)
-            with open(os.path.join(TESTS_DIR, '{}.log').format(id), 'r', encoding='utf-8') as f:
+            with open(os.path.join(TESTS_DIR, '{}.txt').format(id), 'r', encoding='utf-8') as f:
                 expected_lines = f.read().strip().split('\n')
             actual_files = list(sorted(os.listdir(tmp)))
             self.assertEqual(len(actual_files), len(expected_lines))

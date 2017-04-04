@@ -1,0 +1,3 @@
+Usage: imagenetscraper.py [OPTIONS] SYNSET_ID [OUTPUT_DIR]
+
+Error: Invalid value for "-s" / "--size": aaa is not a valid size; example: 100,100

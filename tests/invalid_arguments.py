@@ -31,7 +31,7 @@ class InvalidArgumentsTestCase(unittest.TestCase):
                              stderr=subprocess.PIPE)
         _, stderr = p.communicate()
         self.assertEqual(p.returncode, code)
-        with open(os.path.join(TESTS_DIR, '{}.log').format(id), 'r', encoding='utf-8') as f:
+        with open(os.path.join(TESTS_DIR, '{}.txt').format(id), 'r', encoding='utf-8') as f:
             self.assertEqual(stderr.decode('utf-8'), f.read())
 
     def test_nonexistent_synset_id(self):

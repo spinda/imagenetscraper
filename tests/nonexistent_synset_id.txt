@@ -1,0 +1,2 @@
+Failed to retrieve synset target id, are you sure a synset with id n11111111 exists?
+(Could not find target id in: http://image-net.org/synset?wnid=n11111111)
