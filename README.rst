@@ -1,7 +1,7 @@
 imagenetscraper
 ===============
 
-|pypi|_ |travis|
+|pypi| |travis|
 
 Command-line utility for downloading all thumbnail images from an ImageNet_
 synset, optionally rescaling to a different resolution.
@@ -114,10 +114,10 @@ details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
-.. _pypi: https://pypi.python.org/pypi/imagenetscraper
 .. _ImageNet: http://image-net.org/
 
 .. |pypi| image:: https://img.shields.io/pypi/v/imagenetscraper.svg
     :alt: PyPI
+    :target: https://pypi.python.org/pypi/imagenetscraper
 .. |travis| image:: https://img.shields.io/travis/spinda/imagenetscraper/master.svg
     :alt: Build Status
