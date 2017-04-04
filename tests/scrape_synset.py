@@ -28,7 +28,7 @@ import unittest
 class ScrapeSynsetTestCase(unittest.TestCase):
     def run_synset_scraper(self, id, *args, quiet=False):
         with tempfile.TemporaryDirectory() as tmp:
-            p = subprocess.Popen(('./imagenetscraper.py', 'n00007846', tmp, *args),
+            p = subprocess.Popen(['./imagenetscraper.py', 'n00007846', tmp] + list(args),
                                  stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE)
             stdout, stderr = p.communicate()

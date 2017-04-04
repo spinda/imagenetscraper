@@ -23,7 +23,7 @@ import unittest
 
 class InvalidArgumentsTestCase(unittest.TestCase):
     def run_error_case(self, id, code, *args):
-        p = subprocess.Popen(('./imagenetscraper.py', *args),
+        p = subprocess.Popen(['./imagenetscraper.py'] + list(args),
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
         _, stderr = p.communicate()
