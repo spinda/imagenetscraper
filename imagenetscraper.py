@@ -147,7 +147,7 @@ def main(synset_id, output_dir, concurrency, size, quiet):
 
 Done! If this tool helped with your research, a citation would be appreciated:
 
-@Misc{smith17,
+@Misc{imagenetscraper,
 author = {Michael Smith},
 title = {imagenetscraper: Bulk-download thumbnails from ImageNet synsets},
 howpublished = {\\url{https://github.com/spinda/imagenetscraper}},
