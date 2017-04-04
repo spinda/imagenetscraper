@@ -18,17 +18,20 @@
 # You should have received a copy of the GNU Affero General Public License along
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
+import os.path
 import subprocess
 import unittest
 
+TESTS_DIR = os.path.dirname(os.path.realpath(__file__))
+
 class InvalidArgumentsTestCase(unittest.TestCase):
     def run_error_case(self, id, code, *args):
-        p = subprocess.Popen(['./imagenetscraper.py'] + list(args),
+        p = subprocess.Popen([os.path.join(TESTS_DIR, '..', 'imagenetscraper.py')] + list(args),
                              stdout=subprocess.PIPE,
                              stderr=subprocess.PIPE)
         _, stderr = p.communicate()
         self.assertEqual(p.returncode, code)
-        with open('./tests/{}.log'.format(id), 'r', encoding='utf-8') as f:
+        with open(os.path.join(TESTS_DIR, '{}.log').format(id), 'r', encoding='utf-8') as f:
             self.assertEqual(stderr.decode('utf-8'), f.read())
 
     def test_nonexistent_synset_id(self):

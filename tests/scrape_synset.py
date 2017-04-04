@@ -25,10 +25,13 @@ import subprocess
 import tempfile
 import unittest
 
+TESTS_DIR = os.path.dirname(os.path.realpath(__file__))
+
 class ScrapeSynsetTestCase(unittest.TestCase):
     def run_synset_scraper(self, id, *args, quiet=False):
         with tempfile.TemporaryDirectory() as tmp:
-            p = subprocess.Popen(['./imagenetscraper.py', 'n00007846', tmp] + list(args),
+            p = subprocess.Popen([os.path.join(TESTS_DIR, '..', 'imagenetscraper.py'),
+                                  'n00007846', tmp] + list(args),
                                  stdout=subprocess.PIPE,
                                  stderr=subprocess.PIPE)
             stdout, stderr = p.communicate()
@@ -38,7 +41,7 @@ class ScrapeSynsetTestCase(unittest.TestCase):
                 self.assertEqual(len(stdout), 0)
             else:
                 self.assertNotEqual(len(stdout), 0)
-            with open('./tests/{}.log'.format(id), 'r', encoding='utf-8') as f:
+            with open(os.path.join(TESTS_DIR, '{}.log').format(id), 'r', encoding='utf-8') as f:
                 expected_lines = f.read().strip().split('\n')
             actual_files = list(sorted(os.listdir(tmp)))
             self.assertEqual(len(actual_files), len(expected_lines))
