@@ -1,6 +1,8 @@
 imagenetscraper
 ===============
 
+|travis|
+
 Command-line utility for downloading all thumbnail images from an ImageNet_
 synset, optionally rescaling to a different resolution.
 
@@ -112,4 +114,5 @@ details.
 You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
-.. _ImageNet: http://image-net.org/
+.. ImageNet_: http://image-net.org/
+.. |travis| image:: https://img.shields.io/travis/spinda/imagenetscraper/master.svg
