@@ -1,6 +1,6 @@
-click==6.7
+click==7.0
 defusedxml==0.5.0
 frogress==0.9.1
 grequests==0.3.0
-pillow==4.0.0
-requests==2.13.0
+pillow==5.3.0
+requests==2.20.0

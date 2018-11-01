@@ -70,11 +70,11 @@ Install
 -------
 
 1) Install Python 3, pip, and a development version of libjpeg. imagenetscraper
-   is tested with Python 3.4, 3.5, 3.6 and libjpeg-turbo 8.
+   is tested with Python 3.4-3.7 and libjpeg-turbo 8.
 
    ::
 
-    sudo apt-get install python3.5 python3-pip libjpeg-turbo8-dev
+    sudo apt-get install python3 python3-pip libjpeg-turbo8-dev
 
 2) Download and install imagenetscraper with pip.
 
@@ -96,10 +96,19 @@ If this tool helped with your research, a citation would be appreciated:
     year = {2017}
     }
 
+Testing
+-------
+
+To run unit tests, use:
+
+::
+
+    python3 setup.py test
+
 License
 -------
 
-Copyright (C) 2017 Michael Smith <michael@spinda.net>
+Copyright (C) 2017-2018 Michael Smith <michael@spinda.net>
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free
