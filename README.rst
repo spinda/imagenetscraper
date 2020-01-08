@@ -6,6 +6,14 @@ imagenetscraper
 Command-line utility for downloading all thumbnail images from an ImageNet_
 synset, optionally rescaling to a different resolution.
 
+**NOTICE:** ImageNet downloads are currently offline. This is an upstream issue
+and out of my control. From the relevant announcement_:
+
+    While conducting our study, since January 2019 we have disabled downloads of
+    the full ImageNet data, except for the small subset of 1,000 categories used
+    in the ImageNet Challenge. We are in the process of implementing our
+    proposed remedies. 
+
 Usage
 -----
 
@@ -124,6 +132,7 @@ You should have received a copy of the GNU Affero General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
 .. _ImageNet: http://image-net.org/
+.. _announcement: http://image-net.org/update-sep-17-2019
 
 .. |pypi| image:: https://img.shields.io/pypi/v/imagenetscraper.svg
     :alt: PyPI
