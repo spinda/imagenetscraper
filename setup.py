@@ -5,7 +5,7 @@
 # This file is part of imagenetscraper, a command-line utility for downloading
 # all thumbnail images from an ImageNet synset.
 
-# Copyright (C) 2017 Michael Smith <michael@spinda.net>
+# Copyright (C) 2017-2020 Michael Smith <michael@spinda.net>
 
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free
